@@ -1,0 +1,16 @@
+site_name: Konan LLM
+
+theme:
+  name: 'material'
+  logo: 'images/CI.png'
+  favicon: 'images/favicon.ico'
+  
+nav:
+  - Home: index.md          # 메인 페이지
+  - Version 1:
+      - 개요: v 1.0/개요.md   # docs/v4/index.md로 자동으로 인식됨
+  - Version 2:
+      - Introduction: v 1.0/모델 관리.md    # docs/v5/index.md로 자동으로 인식됨
+
+extra:
+  generator: false
