@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EA%B0%A4%EB%9F%AC%EB%A6%AC/">
+      
+      
+        <link rel="next" href="../%EB%AF%B8%EC%84%B8%20%EC%A1%B0%EC%A0%95/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>추가 학습 - Konan LLM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Konan LLM" class="md-header__button md-logo" aria-label="Konan LLM" data-md-component="logo">
+      
+  <img src="../../images/CI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Konan LLM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              추가 학습
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Konan LLM" class="md-nav__button md-logo" aria-label="Konan LLM" data-md-component="logo">
+      
+  <img src="../../images/CI.png" alt="logo">
+
+    </a>
+    Konan LLM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ver 1.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ver 1.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%EA%B0%9C%EC%9A%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%EB%AA%A8%EB%8D%B8%20%EA%B4%80%EB%A6%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    모델 관리
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EA%B0%A4%EB%9F%AC%EB%A6%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프롬프트 갤러리
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%EC%B6%94%EA%B0%80%20%ED%95%99%EC%8A%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    추가 학습
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%EB%AF%B8%EC%84%B8%20%EC%A1%B0%EC%A0%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    미세 조정
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%ED%94%8C%EB%A0%88%EC%9D%B4%20%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    플레이 그라운드
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EC%84%A4%EA%B3%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프롬프트 설계
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v%201.0/%EA%B2%80%EC%83%89%EC%A6%9D%EA%B0%95%EC%83%9D%EC%84%B1%28RAG%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    검색증강생성(RAG)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ver 2.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ver 2.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EA%B0%9C%EC%9A%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    개요
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EB%AA%A8%EB%8D%B8%20%EA%B4%80%EB%A6%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    모델 관리
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EA%B0%A4%EB%9F%AC%EB%A6%AC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프롬프트 갤러리
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    추가 학습
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    추가 학습
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      개요
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습이 필요한 경우
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습이 필요한 경우">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      도메인 지식의 변경이 예상 되는가?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      학습 데이터를 얼마나 확보할 수 있는가?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      충분한 학습 시간과 GPU 자원을 확보할 수 있는가?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 절차
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 세트 준비
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 세트 준비">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 수집
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 실행
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM 스튜디오
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 모델 평가
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 모델 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 데이터 구축
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 예시
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 정제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      소요시간
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      설치 및 실행
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설치 및 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      설치
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      삭제
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      실행
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제 예시
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 정제 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      규칙 기반 정제 – 공백 및 개행 처리
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      규칙 기반 정제 - 개인정보 비식별화
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      딥러닝 기반 정제
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      중복 제거
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EB%AF%B8%EC%84%B8%20%EC%A1%B0%EC%A0%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    미세 조정
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%ED%94%8C%EB%A0%88%EC%9D%B4%20%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    플레이 그라운드
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%ED%94%84%EB%A1%AC%ED%94%84%ED%8A%B8%20%EC%84%A4%EA%B3%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    프롬프트 설계
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EA%B2%80%EC%83%89%EC%A6%9D%EA%B0%95%EC%83%9D%EC%84%B1%28RAG%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    검색증강생성(RAG)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      개요
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습이 필요한 경우
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습이 필요한 경우">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      도메인 지식의 변경이 예상 되는가?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      학습 데이터를 얼마나 확보할 수 있는가?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      충분한 학습 시간과 GPU 자원을 확보할 수 있는가?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 절차
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 절차">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 세트 준비
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 세트 준비">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 수집
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 실행
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llm" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLM 스튜디오
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      추가 학습 모델 평가
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="추가 학습 모델 평가">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 데이터 구축
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      평가 예시
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 정제">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      소요시간
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      설치 및 실행
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="설치 및 실행">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      설치
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      삭제
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      실행
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      데이터 정제 예시
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 정제 예시">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      규칙 기반 정제 – 공백 및 개행 처리
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      규칙 기반 정제 - 개인정보 비식별화
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      딥러닝 기반 정제
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      중복 제거
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">추가 학습</h1>
+<p>도메인 지식을 모델에 주입하는 방법을 알아보세요.</p>
+<h2 id="_2">개요</h2>
+<p>코난 LLM은 방대한 양의 텍스트로 학습되어서 언어를 이해하고 생성하는 능력이 뛰어납니다. 또한 다양한 지식을 가지고 있습니다. 그러나 특정 조직에서 다루는 도메인에 대한 지식은 부족할 수 있습니다. LLM 스튜디오는 코난 LLM의 언어 능력과 기존 지식은 유지하면서 해당 조직의 도메인 지식을 주입할 수 있는 "추가학습" 기능을 제공합니다. 추가학습을 통해서 특정 도메인에 최적화된 LLM을 만들 수 있습니다.</p>
+<h2 id="_3">추가 학습이 필요한 경우</h2>
+<p>코난 LLM을 추가 학습 시키면 언어 모델에 도메인 지식을 주입시킬 수 있지만 많은 시간과 노력이 필요한 작업이므로 신중하게 결정해야 합니다. 다음과 같은 질문들에 대해 고민해 보고 추가 학습을 할 지 RAG를 적용할 지 결정하는 것이 바람직합니다.</p>
+<h3 id="_4">도메인 지식의 변경이 예상 되는가?</h3>
+<p>추가 학습된 모델은 특정 시점까지의 데이터만 학습이 됩니다. 도메인 지식의 변경이 예상될 경우 RAG가 더 효율적인 방법입니다. Vector Store를 갱신하는 일이 모델을 추가 학습하는 것보다 훨씬 간편한 일이기 때문입니다.</p>
+<h3 id="_5">학습 데이터를 얼마나 확보할 수 있는가?</h3>
+<p>추가 학습된 모델의 품질은 도메인 데이터의 품질과 양에 달려 있습니다. 반면 RAG는 학습 데이터 품질과 양과는 독립적입니다. 충분한 양의 고품질 데이터를 확보할 수 있을 경우에만 추가 학습을 고려하세요.</p>
+<h3 id="gpu">충분한 학습 시간과 GPU 자원을 확보할 수 있는가?</h3>
+<p>추가 학습을 위해서는 충분한 GPU 자원이 확보되어야 합니다. 13B 모델의 경우 최소 320GB의 GPU 메모리가 필요합니다.</p>
+<h2 id="_6">추가 학습 절차</h2>
+<h3 id="_7">데이터 세트 준비</h3>
+<p>추가 학습이 필요하다고 판단한 후에는 모델 학습을 위한 데이터를 준비해야 합니다.</p>
+<h4 id="_8">데이터 수집</h4>
+<p>학습에 사용할 문서 파일들을 학습 서버의 학습 데이터 폴더에 저장합니다.</p>
+<pre><code>${home}/dataset
+</code></pre>
+<p>텍스트 포멧 뿐만 아니라 Microsoft Word, PDF, 아래한글 등 대부분의 문서 포멧을 지원합니다.</p>
+<h4 id="_9">데이터 정제</h4>
+<p>수집한 문서 파일들로부터 텍스트를 추출하고 정제합니다. (자세한 사항은 <a href="add_leaning.html#data_refining" title="4. 데이터 정제">데이터 정제</a>를 참고하세요.)</p>
+<h3 id="_10">추가 학습 실행</h3>
+<h4 id="llm">LLM 스튜디오</h4>
+<p>시작하기 페이지에서 <strong>모델 학습</strong> 탭을 클릭합니다.</p>
+<p><strong>학습 방법 선택</strong> 페이지에서 <strong>추가 학습</strong> 라디오 버튼을 선택합니다.</p>
+<p><strong>계속</strong>을 클릭합니다.</p>
+<p><strong>모델 설정</strong> 페이지에서 추가 학습을 위한 옵션을 설정합니다. (추가 학습 옵션에 대한 자세한 설명은 부록을 확인하세요.)</p>
+<ul>
+<li>
+<p><strong>모델 기본 정보 설정</strong></p>
+</li>
+<li>
+<p>모델 이름: 추가 학습된 모델의 이름을 입력합니다.</p>
+</li>
+<li>기본 모델: 추가 학습하려는 기본 모델을 선택합니다.</li>
+<li>
+<p><strong>UI를 통한 설정</strong></p>
+</li>
+<li>
+<p>학습 반복: 전체 데이터 세트를 처리하는 횟수</p>
+</li>
+<li>배치 크기: 한 스텝 당 처리하는 데이터 수</li>
+<li>학습률: 학습 중 매개변수를 변경하는 속도</li>
+</ul>
+<p><strong>계속</strong>을 클릭합니다.</p>
+<p><strong>학습 데이터 설정</strong> 페이지에서 추가 학습할 문서들이 저장된 폴더를 설정합니다.</p>
+<p><strong>학습 시작</strong>을 클릭합니다.</p>
+<p>모델 학습 상태는 모델 관리 페이지에서 확인할 수 있습니다.</p>
+<h3 id="_11">추가 학습 모델 평가</h3>
+<p>미리 구축한 도메인의 평가 데이터를 이용하여 추가 학습 전의 언어모델과 추가 학습 후의 언어 모델을 비교 평가합니다.</p>
+<h4 id="_12">평가 데이터 구축</h4>
+<p>추가 학습 데이터의 도메인 관련 단어들을 포함한 문장들로 평가 데이터를 구축합니다.</p>
+<h4 id="_13">평가 예시</h4>
+<ul>
+<li>위키(한국어)데이터 학습 전 생성 결과
+  <code>입력: 오펜하이머는
+  결과: 친구들과 함께 여행을 떠났습니다. 혜린은 여러 곳에서 사진을 찍어 왔는데, 그 중에서도 흥미롭게 생긴 사람들을 찾아보려고 합니다.</code></li>
+<li>위키(한국어)데이터 학습 후 생성 결과
+  <code>입력: 오펜하이머는
+  결과: 2차 세계대전 당시 핵무기를 개발한 맨해튼 프로젝트의 총책임자였다. 그는 1945년 7월 16일 오전 5시 29분 45초, 뉴멕시코주 앨라모고도 사막에서 인류 최초의 핵실험인 ‘트리니티 테스트’를 성공적으로 이끌었다. 이 실험으로 일본 히로시마와 나가사키에 투하된 핵폭탄이 만들어졌다.</code></li>
+</ul>
+<h2 id="_14">데이터 정제</h2>
+<p>언어모델의 생성 품질은 학습 데이터의 질에 깊이 연관되어 있습니다. 데이터 정제 과정은 원본 문서 파일로부터 텍스트를 추출하고, 노이즈를 제거하여 언어 모델 학습을 위한 고품질 데이터셋을 구축하는데 중요합니다.</p>
+<p>아래와 같은 노이즈들을 제거합니다. (괄호는 대응되는 정제 방법)</p>
+<ul>
+<li>의미가 없는 특수 문자 (규칙기반, 딥러닝 정제)</li>
+<li>학습 데이터로서 가치가 없는 단순한 텍스트 (규칙기반, 딥러닝 정제)</li>
+<li>중복 텍스트 (중복제거)</li>
+<li>개인정보 (규칙기반 정제)</li>
+</ul>
+<h3 id="_15">소요시간</h3>
+<ul>
+<li>텍스트 추출: 파일당 \~1초 소요. 표 추출 활성화 시 파일당 \~10분까지도 소요될 수 있음.</li>
+<li>규칙기반 정제: 초당 \~200건 처리 (건당 글자수 \~3000자)</li>
+<li>중복제거: 초당 \~500건 처리 (건당 글자수 \~3000, 200만건 기준 메모리 1GB 점유)</li>
+<li>딥러닝 정제: 초당 \~100건 처리 (건 당 글자수 \~3000, RTX 3090 기준)</li>
+</ul>
+<h3 id="_16">설치 및 실행</h3>
+<h4 id="_17">설치</h4>
+<p>제공받은 소스 (data-cleanser.zip)의 압축을 해제한 후 다음 명령어를 실행합니다.</p>
+<pre><code>./build.sh
+
+소요 시간: 약 10분
+</code></pre>
+<h4 id="_18">삭제</h4>
+<pre><code>./reset.sh
+</code></pre>
+<h4 id="_19">실행</h4>
+<pre><code>./docker_run.sh –-src_dir /path/to/src -–dst_dir /path/to/dst –-log_dir /path/to/log -–extract_table -–n_lines 100 -–rulebase -–protect_pii -–deduplication -–n_lines 100 –-gpus 4,5,6
+</code></pre>
+<p>옵션 설명:</p>
+<ul>
+<li>--src_dir: 데이터의 소스 디렉터리 경로입니다.</li>
+<li>--dst_dir: 처리된 데이터를 저장할 목적지 디렉터리 경로입니다.</li>
+<li>--n_lines: 데이터 파일에 저장할 최대 행(row)수를 지정합니다. (파일 1개당 1행)</li>
+<li>--max_workers: 동시에 실행할 worker 갯수를 지정합니다.</li>
+<li>--gpus: 사용할 GPU를 지정합니다. (지정 시 딥러닝 정제 활성화)</li>
+<li>--rulebase: 규칙기반 정제를 활성화합니다.</li>
+<li>--deduplication: 중복 문서를 제거합니다.</li>
+<li>--protect pii: 개인정보를 비식별화 합니다.</li>
+<li>--extract_table: 문서 내 표를 추출합니다. (hwp, hwpx 사용 불가)</li>
+</ul>
+<h3 id="_20">데이터 정제 예시</h3>
+<h4 id="_21">규칙 기반 정제 – 공백 및 개행 처리</h4>
+<ul>
+<li>정제 전
+  <code>``
+  여분의   공백을    사이에 둔   예시   텍스트     .
+      의미  없는     단순</code>   텍스트 `     제거   \ufeff--\u3000\u200b\xa0.</li>
+</ul>
+<p>개행 정리
+   예시</p>
+<p>예시 끝.
+  <code>* 정제 후</code>
+  여분의 공백을 사이에 둔 예시 텍스트 .
+  의미 없는 단순 <code>텍스트</code> 제거   .</p>
+<p>개행 정리
+  예시</p>
+<p>예시 끝.
+  ```</p>
+<h4 id="-">규칙 기반 정제 - 개인정보 비식별화</h4>
+<ul>
+<li>정제 전
+  <code>이름 : 아무개
+  주민등록번호 : 240103-1234567
+  집전화 : 02-123-4567
+  핸드폰 : 010-1234-5678
+  계좌번호 : 우리은행 1234-567-899999
+  카드번호 : 1234-5678-9101-1121
+  이메일 : abcdef@email.com</code></li>
+<li>정제 후
+  <code>이름 : 아무개
+  주민등록번호 : &lt;|rrn|&gt;
+  집전화 : &lt;|tel|&gt;
+  핸드폰 : &lt;|tel|&gt;
+  계좌번호 : &lt;|acc|&gt;
+  카드번호 : &lt;|crd|&gt;
+  이메일 : &lt;|email|&gt;</code></li>
+</ul>
+<h4 id="_22">딥러닝 기반 정제</h4>
+<ul>
+<li>단순 광고 제거
+  ```
+  303 캐시닥 지니어트 타임스프레드 용돈퀴즈 정답
+  #앱테크 #추천인 #친구 #초대 #코드 #캐시닥 #캐시워크 #지니어트 #타임스프레드 #퀴즈 #정답 #마일벌스 #체리포인트 #쿠팡 #위메프</li>
+</ul>
+<p>#마일벌스 (bn92040) 숫자0
+   추천ID 입력시 가입자혜택은 없지만 입력해주시면 정말 감사드려요.꾸벅. 매일출첵(10~200원). 광고보면 20원.쉽게모아짐.상품권교환가능
+   #포인트몬스터 (DTOXRRU4GE5T) 영어O
+   추천인500원.출첵(10원~50원).설문.미션수행.상품권.포인트 쉽게모아짐.혜자앱
+   #캐시존 (ADF9OE) 영어O
+   초대코드 입력시 1000원. 매일 출석체크룰렛(20원~1000원).짧은광고보고캐시적립.출금가능
+  <code>* 문서 변환 시 깨진 텍스트 제거</code>
+  +8tt+rtEl^lH  rl|374,5H  ^l6JE r{40= I  +Att+rlgl^}80il $il  e++ 6 412=9+  €q  eldtol+rlH.L^.|Er tl*ELltr}.</p>
+<p>20t28  8fl  149</p>
+<p>at  ^lB</p>
+<p>Ell E.  ol  ^l EE+r[rl</p>
+<p>Ef€*4grl</p>
+<p>BHET|g6 14.JdtE| 7l$?lel. :gtrJg 7lIH.tf[l,lpl7l-+tl  ETlele  +ql= .J6HE Tlel Fxl_Er.^l+   .J6llg E  At|Tlel Fxl.Ha^l= 44  4E</p>
+<p>411 +  el^relTllg</p>
+<p>I. El^]slT  lls L al^lol Tlls</p>
+<p>\1) Ol^Ef  : i.saJBtJ 18c.f lqtllal+5tl+^fsl^f 2)€  aJB : 201181 19 Oeg</p>
+<p>\3) trl|rl  : ^lgqH^l  e'J+  E1l-"1lE14te2(  qAt5, 14=)
+  <code>* 의미없는 텍스트 제거</code>
+  나서 방식이 뿐이다~! 현대 그랜져tg으나 가르침들은 현대 그랜져tg하는데 싹 강조에서도 나들이가 기아 올뉴카니발이므로 그만큼
+  양파이 빼네~ 기아 레이을 부잣집답게 여우때문에 농사일되어 어쨌던 디자이너은 관련되네~!운전기사부터 볼보 xc90만 간판하는데 손수 벤츠slk까지
+  신용회복중고차할부에 의해서 식사에서도 그것은 부족좀 낮아지다~쉐보레 크루즈되어 조각하는데 군미필중고차전액할부에 의한 아우디 q3할때 및
+  쌍용 액티언스포츠좀 소유하네. 국산되어 등록금되어 와이셔츠하는데 어서 신규하여 범인으나 분홍색했을경우 그렇지만 르노삼성 뉴sm3좀 결정되네~!
+  품질을 옥상까지 시작보다도 또한 주요으나 가수할때 르노삼성 sm7 노바에 의한 그리고나서 아우디 뉴a6은 늘네~이론적이고 철학자까지 닛산
+  알티마하며 영어에서도 벤츠 c200에서 학습하여 그리고 시계으로 구성하다. 우정에서도 해결으로 무직자중고차전액할부은 단순히 벤츠s350되어
+  기아 올뉴쏘렌토들은 신용불량할부에는 비교적 친척이 얘기하다~점심때에는 만일하면 평소부터 없이 신용불량자중고차할부을 그래서 통화좀 귀국하네요~!
+  ```</p>
+<h4 id="_23">중복 제거</h4>
+<p>완전히 일치하지 않더라도 중복되는 영역이 대다수일 경우 제거 대상이 됩니다.</p>
+<ul>
+<li>중복 문서 제거</li>
+</ul>
+<p><code>'쇼킹나이트', 'HOT'한 참가자 대거 등장
+  ‘쇼킹나이트’ ‘쇼킹나이트’ 참가자들이 화려한 이력과 무대로 관심을 모으고 있다.지난달 28일 MBN에서 방송한
+  ‘국내 유일 땐-스 가요제, 쇼킹나이트(제작 스페이스래빗, 열린미디어, 이하 ’쇼킹나이트‘)’는 전 아이돌 출신
+  멤버부터 유명 인플루언서까지 ‘핫’한 참가자가 대거 출연했다.이날 방송에는 과거 룰라 백업 댄서이자 그룹 팀
+  (TEAM)으로 활동했던 낙타가 출연했다. 낙타는 “Ever you go ever you go 내 맘 깊은 곳에 넌 사는걸”이라며 1999년
+  발표된 그룹 팀의 대표곡 ‘별(別)’ 한 소절을 불렀고, MC들은 단박에 알아차리고 다 같이 노래를 따라 불렀다.
+  ...
+  90년대 초반 가수의 노래로 무대를 꾸몄다는 점에서 새롭게 Y2K를 표현하는 그룹의 등장을 기대하게 만들었다. 탁재훈은 “‘쇼킹나이트’가
+  발견한 보석”이라고 극찬했으며, 이특 또한 “보아 어릴 때 같다”며 놀라움을 감추지 못했다.이처럼 그동안 TV에서 쉽게 볼 수 없었던 과거
+  인물들을 소환하고 핫한 인물들을 새롭게 소개하고 있는 ‘쇼킹나이트’는 앞으로도 참가자들의 다양한 매력을 계속해서 보여줄 예정이다.
+  한편, ‘쇼킹나이트’는 매주 금요일 오후 9시 50분 MBN에서 방송한다.</code></p>
+<p><code>'쇼킹나이트', 전 아이돌부터 유명 인플루언서까지...'참가자 이력' 눈길
+  뉴스디지털부사진=MBN '쇼킹나이트''쇼킹나이트'의 특별한 참가자들이 눈길을 사로잡았다.지난달 28일 MBN에서 방송한
+  '국내 유일 땐-스 가요제, 쇼킹나이트(제작 스페이스래빗, 열린미디어, 이하 '쇼킹나이트')'는 전 아이돌 출신 멤버부터
+  유명 인플루언서까지 '핫'한 참가자가 대거 출연했다.이날 방송에는 과거 룰라 백업 댄서이자 그룹 팀(TEAM)으로 활동했던
+   낙타가 출연해 모두를 깜짝 놀라게 만들었다. 낙타는 "Ever you go ever you go 내 맘 깊은 곳에 넌 사는걸"이라며 1999년
+  발표된 그룹 팀의 대표곡 '별(別)' 한 소절을 불렀고, MC들은 단박에 알아차리고 다 같이 노래를 따라 불렀다.
+  ...
+  90년대 초반 가수의 노래로 무대를 꾸몄다는 점에서 새롭게 Y2K를 표현하는 그룹의 등장을 기대하게 만들었다. 탁재훈은 "'쇼킹나이트'가
+  발견한 보석"이라고 극찬했으며, 이특 또한 "보아 어릴 때 같다"며 놀라움을 감추지 못했다.이처럼 그동안 TV에서 쉽게 볼 수 없었던 과거
+  인물들을 소환하고 핫한 인물들을 새롭게 소개하고 있는 '쇼킹나이트'는 앞으로도 참가자들의 다양한 매력을 계속해서 보여줄 예정이다.
+  한편, '쇼킹나이트'는 매주 금요일 오후 9시 50분 MBN에서 방송한다.뉴스디지털부</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
