@@ -8,8 +8,8 @@ theme:
     text: Noto Sans KR
     code: Roboto Mono
   palette:
-    primary: deep blue
-    accent: deep blue
+    primary: '#00008B'  # deep blue 대신 유효한 색상 코드 사용
+    accent: '#00008B'
   
 nav:
   - Home: index.md          # 메인 페이지
@@ -36,3 +36,10 @@ extra:
 
 extra_css:
   - extra.css
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: 'PDF_folder/Konan-LLM_1.0.pdf'
+      author: 'Konan Technology'
+      cover_title: 'Konan LLM v1.0'

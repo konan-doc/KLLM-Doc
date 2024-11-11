@@ -59,4 +59,4 @@
 
 ![데이터 흐름 예시](resources/intro-4-flow.png)
 
-```
+
