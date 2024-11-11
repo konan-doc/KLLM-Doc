@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#00008B" data-md-color-accent="#00008B">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -325,15 +325,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      모델 유형
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
       모델 목록
     </span>
   </a>
@@ -342,7 +333,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       기본 모델
     </span>
@@ -351,7 +342,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       미세 조정 모델
     </span>
@@ -365,7 +356,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       상태
     </span>
@@ -754,15 +745,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      모델 유형
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
       모델 목록
     </span>
   </a>
@@ -771,7 +753,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       기본 모델
     </span>
@@ -780,7 +762,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       미세 조정 모델
     </span>
@@ -794,7 +776,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       상태
     </span>
@@ -819,138 +801,103 @@
 
 <h1 id="_1">모델 관리</h1>
 <p>LLM 스튜디오를 통해 다양한 기능을 가진 여러 모델들을 관리할 수 있습니다. 또한 미세 조정을 통해 필요한 용도에 맞게 모델을 새롭게 정의할 수 있습니다.</p>
-<h2 id="_2">모델 유형</h2>
+<p><strong>모델 유형</strong></p>
 <p>모델 관리 페이지에서 확인할 수 있는 모델들의 유형은 다음과 같습니다.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>유형</strong></th>
-<th style="text-align: left;"><strong>설명</strong></th>
+<th><strong>유형</strong></th>
+<th><strong>설명</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">-----------------------------------------------------------------------------------------</td>
-<td style="text-align: left;"></td>
+<td>기본모델</td>
+<td>LLM스튜디오를 통해 다양한 업무를 위해 미세 조정할 수 있는  사전 학습된 모델</td>
 </tr>
 <tr>
-<td style="text-align: left;">기본모델</td>
-<td style="text-align: left;">LLM 스튜디오를 통해 다양한 업무를 위해 미세 조정할 수 있는 사전 학습된 모델</td>
-</tr>
-<tr>
-<td style="text-align: left;">:-</td>
-<td style="text-align: left;">:-</td>
-</tr>
-<tr>
-<td style="text-align: left;">미세조정모델</td>
-<td style="text-align: left;">미세조정을 거쳐 업무에 적용할 수 있는 모델</td>
+<td>미세조정모델</td>
+<td>미세조정을 거쳐 업무에 적용할 수 있는 모델</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_3">모델 목록</h2>
+<h2 id="_2">모델 목록</h2>
 <p>모델 관리 메뉴를 클릭하면 LLM 스튜디오에서 접근할 수 있는 모델들의 목록을 확인할 수 있습니다.</p>
-<h3 id="_4">기본 모델</h3>
+<h3 id="_3">기본 모델</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>모델명</strong></th>
-<th style="text-align: left;"><strong>설명</strong></th>
-<th style="text-align: left;"><strong>속성</strong></th>
+<th><strong>모델명</strong></th>
+<th><strong>설명</strong></th>
+<th><strong>속성</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">------------------------------------------------------------------------</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
+<td>kylin-13b-2308</td>
+<td>자연어를 이해하고 생성할 수 있는 파운데이션 모델</td>
+<td>2K</td>
 </tr>
 <tr>
-<td style="text-align: left;">kylin-13b-2308</td>
-<td style="text-align: left;">자연어를 이해하고 생성할 수 있는 파운데이션 모델</td>
-<td style="text-align: left;">2K</td>
+<td>kylin-13b-inst-dpo-2312</td>
+<td>kylin-13b모델에 대한 인스트럭션 튜닝 모델</td>
+<td>4K</td>
 </tr>
 <tr>
-<td style="text-align: left;">:-</td>
-<td style="text-align: left;">:-</td>
-<td style="text-align: left;">:-</td>
+<td>kylin-embedding-2310</td>
+<td>텍스트 입력에 대한 임베딩 벡터 반환</td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align: left;">kylin-13b-inst-dpo-2312</td>
-<td style="text-align: left;">kylin-13b 모델에 대한 인스트럭션 튜닝 모델</td>
-<td style="text-align: left;">4K</td>
-</tr>
-<tr>
-<td style="text-align: left;">kylin-embedding-2310</td>
-<td style="text-align: left;">텍스트 입력에 대한 임베딩 벡터 반환</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">kylin-safety-2312</td>
-<td style="text-align: left;">유해성 텍스트 분류 모델</td>
-<td style="text-align: left;"></td>
+<td>kylin-safety-2312</td>
+<td>유해성 텍스트 분류 모델</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="_5">미세 조정 모델</h3>
+<h3 id="_4">미세 조정 모델</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>모델명</strong></th>
-<th style="text-align: left;"><strong>설명</strong></th>
+<th><strong>모델명</strong></th>
+<th><strong>설명</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">-----------------------------------------------------------------</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;">kylin-13b-2308-sft-2310</td>
-<td style="text-align: left;">kylin-13b 모델에 대한 미세 조정 모델</td>
-</tr>
-<tr>
-<td style="text-align: left;">:-</td>
-<td style="text-align: left;">:-</td>
+<td>kylin-13b-2308-sft-2310</td>
+<td>kylin-13b모델에 대한 미세 조정 모델</td>
 </tr>
 </tbody>
 </table>
-<h2 id="_6">상태</h2>
-<p>모델의 현재 상태를 표시합니다.</p>
+<h2 id="_5">상태</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>상태</strong></th>
-<th style="text-align: left;"><strong>설명</strong></th>
+<th><strong>상태</strong></th>
+<th><strong>설명</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
-<td style="text-align: left;"></td>
+<td>실행 중</td>
+<td>모델을 로드한  상태입니다. * 프롬프트 템플릿이나 플레이그라운드 페이지에서 모델을       실행하기 위해서는 먼저 모델을 로드해야 합니다.* 모델 학습 시CPU, GPU,메모리 등 자원이 부족할 경우에는 자원 확보를 위해[언로드]버튼을 클릭하여 모델을 언로드합니다.</td>
 </tr>
 <tr>
-<td style="text-align: left;">실행 중</td>
-<td style="text-align: left;">모델을 로드한 상태입니다.<em> 프롬프트 템플릿이나 플레이그라운드 페이지에서 모델을 실행하기 위해서는 먼저 모델을 로드해야 합니다.</em> 모델 학습 시 CPU, GPU, 메모리 등 자원이 부족할 경우에는 자원 확보를 위해 [언로드] 버튼을 클릭하여 모델을 언로드합니다.</td>
+<td>학습 완료</td>
+<td>학습이 완료된  상태이며[로드]버튼을 클릭하여 모델을 활성화할 수  있습니다.</td>
 </tr>
 <tr>
-<td style="text-align: left;">:-</td>
-<td style="text-align: left;">:-</td>
+<td>학습 중</td>
+<td>학습을 진행 중인  상태입니다.현재 학습 진행율이 함께 표시됩니다. [중지]버튼을 클릭하여 학습을 중단할 수 있습니다. * 학습 진행 중인 모델만 중단할 수 있습니다.* 학습 중인 모델이 있을 경우 모델 관리를 제외한 다른       메뉴들은 비활성화됩니다.</td>
 </tr>
 <tr>
-<td style="text-align: left;">학습 완료</td>
-<td style="text-align: left;">학습이 완료된 상태이며 [로드] 버튼을 클릭하여 모델을 활성화할 수 있습니다.</td>
+<td>학습 취소</td>
+<td>학습을 중지한  상태입니다. [재시작]버튼을 클릭하여 학습을 다시 시작할  수 있습니다.</td>
 </tr>
 <tr>
-<td style="text-align: left;">학습 중</td>
-<td style="text-align: left;">학습을 진행 중인 상태입니다. 현재 학습 진행율이 함께 표시됩니다. [중지] 버튼을 클릭하여 학습을 중단할 수 있습니다.<em> 학습 진행 중인 모델만 중단할 수 있습니다.</em> 학습 중인 모델이 있을 경우 모델 관리를 제외한 다른 메뉴들은 비활성화됩니다.</td>
-</tr>
-<tr>
-<td style="text-align: left;">학습 취소</td>
-<td style="text-align: left;">학습을 중지한 상태입니다. [재시작] 버튼을 클릭하여 학습을 다시 시작할 수 있습니다.</td>
-</tr>
-<tr>
-<td style="text-align: left;">오류</td>
-<td style="text-align: left;">학습 중에 실패한 상태입니다.</td>
+<td>오류</td>
+<td>학습 중에 실패한  상태입니다.</td>
 </tr>
 </tbody>
 </table>
