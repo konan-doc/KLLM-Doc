@@ -1,0 +1,36 @@
+site_name: Konan LLM
+
+theme:
+  name: 'material'
+  logo: 'images/CI.png'
+  favicon: 'images/favicon.ico'
+  font:
+    text: Noto Sans KR
+    code: Roboto Mono
+  palette:
+    primary: '#00008B'  # deep blue 대신 유효한 색상 코드 사용
+    accent: '#00008B'
+  
+nav:
+  - Home: index.md          # 메인 페이지
+  - Ver 2.0:
+      - 개요: v 2.0/개요.md   
+      - 모델 관리: v 2.0/모델 관리.md 
+      - 프롬프트 갤러리: v 2.0/프롬프트 갤러리.md
+      - 추가 학습: v 2.0/추가 학습.md
+      - 미세 조정: v 2.0/미세 조정.md
+      - 플레이 그라운드: v 2.0/플레이 그라운드.md
+      - 프롬프트 설계: v 2.0/프롬프트 설계.md
+      - 검색증강생성(RAG): v 2.0/검색증강생성(RAG).md      
+extra:
+  generator: false
+
+extra_css:
+  - extra.css
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: 'PDF_folder/Konan-LLM_2.0.pdf'
+      author: 'Konan Technology'
+      cover_title: 'Konan LLM v2.0'
