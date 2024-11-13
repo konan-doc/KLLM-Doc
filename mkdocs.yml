@@ -40,6 +40,10 @@ extra_css:
 plugins:
   - search
   - with-pdf:
+      cover: true
+      cover_logo: docs/images/logo.png
+      cover_title: 'Konan LLM'
+#      cover_subtitle: "Ver. 1.0"      
       output_path: 'PDF_folder/Konan-LLM_1.0.pdf'
       author: 'Konan Technology'
-      cover_title: 'Konan LLM v1.0'
+      custom_template_path: templates

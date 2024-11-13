@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+// PDF 특정 스타일
+@page {
+  margin: 2cm;
+  @bottom-center {
+    content: counter(page);
+  }
+}
