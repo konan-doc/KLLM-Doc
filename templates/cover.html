@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .cover-page, .copyright-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+        }
+        .cover-page {
+            justify-content: space-between; /* 상단과 하단에 요소 배치 */
+            height: 100vh; /* 전체 화면 높이 사용 */
+        }
+        .cover-page img {
+            align-self: flex-end; /* 이미지 하단 정렬 */
+            max-width: 200px;
+        }
+        .copyright-page {
+            page-break-before: always;
+            text-align: left; /* 좌측 정렬 */
+        }
+        h1 {
+            font-size: 3.5em; /* 제목 글자 크기 조정 */
+			font-weight: bold;
+        }
+<!--        p {
+            font-size: 1.2em; /* 본문 글자 크기 조정 */
+        }   -->
+		.title {
+			font-weight: bold;
+		}
+    </style>
+</head>
+<body>
+    <!-- 커버 페이지 -->
+    <div class="cover-page">
+        <h1>Konan LLM</h1>
+        <p>Ver. 1.0</p>
+        <img src="./logo.png" alt="Logo">
+    </div>
+
+    <!-- 저작권 정보 페이지 -->
+    <div class="copyright-page">
+        <div class="section">
+            <p class="title">Copyright Notice</p>
+            <p>서울특별시 서초구 강남대로 327 대륭서초타워 6, 7, 9층</p><br>
+        </div>
+        <div class="section">
+            <p class="title">저작권</p>
+            <p>Copyright Konan Technology Inc. All rights reserved.</p>
+            <p>이 매뉴얼의 저작권은 (주)코난테크놀로지에 있습니다. 이 매뉴얼은 (주)코난테크놀로지의 허락 없이 전부 혹은 일부를 무단으로 인용, 복사, 전재, 유포 혹은 재사용할 수 없습니다.</p><br>
+        </div>
+        <div class="section">
+            <p class="title">유지 보수 문의</p>
+            <p>제품 유지 보수 및 문의는 고객서비스팀으로 문의 바랍니다.</p>
+            <p>- Tel : 02-3469-8588</p>
+            <p>- E-Mail : <a href="mailto:cs@konantech.com">cs@konantech.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

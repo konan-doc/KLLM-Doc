@@ -1,10 +1,10 @@
-site_name: Konan LLM
+site_name: Konan LLM 매뉴얼
 docs_dir: 'docs/v 1.0'
 site_dir: 'site/v 1.0'
 
 theme:
   name: 'material'
-  logo: 'images/CI.png'
+  logo: 'images/logo.png'
   favicon: 'images/favicon.ico'
   font:
     text: Noto Sans KR
@@ -14,8 +14,7 @@ theme:
     accent: '#00008B'
   
 nav:
-  - Home: index.md          # 메인 페이지
-  - Ver 1.0:
+  - Konan LLM v1:
       - 개요: 개요.md   
       - 모델 관리: 모델 관리.md 
       - 프롬프트 갤러리: 프롬프트 갤러리.md
@@ -24,6 +23,7 @@ nav:
       - 플레이 그라운드: 플레이 그라운드.md
       - 프롬프트 설계: 프롬프트 설계.md
       - 검색증강생성(RAG): 검색증강생성(RAG).md
+ 
 extra:
   generator: false
 
@@ -33,10 +33,11 @@ extra_css:
 plugins:
   - search
   - with-pdf:
-      cover: true
-      cover_logo: docs/images/logo.png
-      cover_title: 'Konan LLM'
-      cover_subtitle: "Ver. 1.0"      
-      output_path: 'PDF_folder/Konan-LLM_1.0.pdf'
-      author: 'Konan Technology'
-      custom_template_path: templates
+       enabled: false
+#      cover: true
+#      cover_logo: images/logo.png
+#      cover_title: 'Konan LLM'
+ #     cover_subtitle: "Ver. 1.0"      
+  #    output_path: 'PDF_folder/Konan-LLM_1.0.pdf'
+   #   author: 'Konan Technology'
+    #  custom_template_path: templates

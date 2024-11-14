@@ -1,4 +1,4 @@
-﻿# Konan LLM
+﻿#Konan LLM
 
 **Copyright Notice**
 서울특별시 서초구 강남대로 327 대륭서초타워 6, 7, 9층
@@ -10,7 +10,7 @@ Copyright Konan Technology Inc. All rights reserved.
 
 
 **유지 보수 문의**
-제품 유지 보수 및 문의는 고객서비스팀으로 문의 바랍니다. - Tel : 02-3469-8588
-
+제품 유지 보수 및 문의는 고객서비스팀으로 문의 바랍니다. 
+- Tel : 02-3469-8588
 - E-Mail : cs@konantech.com
 

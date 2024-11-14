@@ -12,7 +12,7 @@ theme:
     accent: '#00008B'
   
 nav:
-  - Home: index.md          # 메인 페이지
+  - Konan LLM: index.md          # 메인 페이지
   - Ver 1.0:
       - 개요: v 1.0/개요.md   
       - 모델 관리: v 1.0/모델 관리.md 
